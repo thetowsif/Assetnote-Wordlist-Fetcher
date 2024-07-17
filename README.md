@@ -1,7 +1,21 @@
 # Assetnote Wordlist Fetcher
 
-## A script that fetches only the latest wordlist from [Assetnote Wordlists](https://wordlists.assetnote.io) archive
+## A script that fetches the latest wordlist from the [Assetnote Wordlists](https://wordlists.assetnote.io) archive. If you have an outdated wordlist, it will update it with the latest version. As the wordlist is updated every 28th of the month!
 
+
+How to run:
+-----------
+```
+$ pip install -r requirements.txt
+$ python3 main.py
+```
+
+You can add a corn job that will run this script every 26th of the month:
+------------------------------------------------------------------------
+```
+$ sudo bash -c 'echo "0 0 29 * * /usr/bin/python3 /path/to/Assetnote-Wordlist-Fetcher/main.py" >> /etc/crontab'
+
+```
 
 [Assetnote Wordlists](https://wordlists.assetnote.io)
 --------------------
