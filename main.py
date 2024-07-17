@@ -4,7 +4,7 @@ import requests
 from datetime import datetime
 from bs4 import BeautifulSoup
 
-base_url = "https://wordlists-cdn.assetnote.io/data/"
+base_url = "https://wordlists-cdn.assetnote.io/"
 raw_base_url = "https://wordlists-cdn.assetnote.io/rawdata/"
 
 def get_files(category):
@@ -74,7 +74,7 @@ def download_latest_files(category):
             special_save_path = os.path.join(category, special_file)
             download_file(special_file_url, special_save_path)
 
-categories = ["automated", "manual", "technologies", "kiterunner"]
+categories = ["data/automated", "data/manual", "data/technologies", "data/kiterunner"]
 
 for category in categories:
     download_latest_files(category)
